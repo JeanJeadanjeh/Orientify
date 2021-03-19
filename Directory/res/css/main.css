@@ -141,7 +141,7 @@ body {
   }
 
   body {
-    background-image: url("../images/wallpaper_phone.jpg");
+    background-image: url("../images/wallpaper.jpg");
     display: flex;
     flex-direction: column;
   }
