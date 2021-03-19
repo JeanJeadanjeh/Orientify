@@ -1,0 +1,78 @@
+@import url("../fonts/fonts.css");
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: "Aileron-Regular", "Segoe UI";
+  margin: 0;
+}
+
+button {
+  color: #fff;
+  background-color: #07f;
+  width: 6em;
+  height: 2em;
+  border: none;
+  border-radius: 0.3em;
+  font-size: 1.5em;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  background-color: #01f;
+}
+
+h1 {
+  font-family: "Aileron-Semibold";
+  color: #07f;
+}
+
+input {
+  /*Dimensions*/
+  height: 2em;
+  width: 15em;
+
+  /*Font*/
+  font-size: 1.2em;
+  font-family: "Aileron-Light";
+
+  /*Border*/
+  border: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #444;
+  border-radius: 0.3em;
+}
+
+input:focus {
+  outline: none;
+}
+
+.options-button {
+  width: 35em;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.6em;
+}
+
+.options-button button {
+  height: 3em;
+}
+
+.options-button .not-active {
+  background-color: #888;
+}
+
+.options-button .active {
+  background-color: #07f;
+}

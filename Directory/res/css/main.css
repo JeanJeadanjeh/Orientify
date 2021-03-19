@@ -1,0 +1,293 @@
+body {
+  background-image: url("../images/wallpaper.jpg");
+  background-attachment: cover;
+  background-size: auto;
+  margin: 0;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.navigation {
+  display: flex;
+  background-color: #fff;
+  height: 5em;
+  margin-top: 0;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  background-color: #fff;
+  height: 5em;
+  margin-top: 0;
+  align-items: center;
+}
+.logo img {
+  padding-left: 1em;
+  width: 2.7em;
+}
+.logo h1 {
+  padding-left: 0.3em;
+  margin: 0;
+  color: #000;
+}
+
+.navigation ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  font-size: 1.2em;
+  color: #000;
+}
+
+.navigation li a {
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #000;
+  text-decoration: none;
+}
+
+.sign-in {
+  display: flex;
+  background-color: #fff;
+  height: 5em;
+  margin-top: 0;
+  align-items: center;
+  width: 20em;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.sign-in img {
+  width: 2em;
+}
+.sign-in h1 {
+  padding-left: 0.3em;
+  padding-right: 1em;
+  margin: 0;
+  font-size: 1.2em;
+  color: #000;
+  font-family: "Aileron-Regular";
+  font-weight: normal;
+}
+
+.menu {
+  display: none;
+}
+
+.main_section {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main_section img {
+  width: 9em;
+}
+.main_section h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 4.5em;
+  text-align: center;
+}
+.main_section h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.main_section h3 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.main_section h4 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 1em;
+}
+
+#dropdown {
+  display: none;
+}
+
+#create-an-account {
+  background-color: #fff;
+  color: #07f;
+  padding: 0;
+  width: 10em;
+}
+
+#create-an-account:active {
+  background-color: #07f;
+  color: #fff;
+  padding: 0;
+  width: 10em;
+}
+
+@media only screen and (max-width: 1000px) {
+  @keyframes rotateX {
+    0% {
+      opacity: 0;
+      transform: rotateX(-90deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+  }
+
+  body {
+    background-image: url("../images/wallpaper_phone.jpg");
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navigation {
+    background-color: white;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    margin: 0.9em;
+  }
+
+  .logo img {
+    width: 2em;
+    padding-left: 0;
+  }
+
+  .logo h1 {
+    font-family: "Aileron-Regular";
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 0;
+    color: #000;
+  }
+
+  .navigation ul {
+    display: none;
+  }
+
+  .navigation li a {
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .sign-in {
+    display: none;
+  }
+
+  #dropdown {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #dropdown ul {
+    flex: 1;
+    list-style-type: none;
+    background-color: white;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    animation-name: rotateX;
+    animation-duration: 1s;
+  }
+
+  #dropdown li {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  #dropdown a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .menu {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/menu-rounded-solid.svg");
+    background-repeat: no-repeat;
+    background-size: 70% 70%;
+    background-position: center;
+    padding: 0.8em;
+    width: 0.8em;
+    height: 0.8em;
+    margin-right: 0.3em;
+  }
+
+  .main_section {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main_section img {
+    width: 7em;
+  }
+
+  .main_section h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 3.5em;
+    font-weight: 400;
+    text-align: center;
+  }
+  .main_section h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.65em;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .main_section h3 {
+    font-weight: normal;
+    text-align: center;
+    width: 19em;
+    font-size: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .main_section h4 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+  .main_section br {
+    display: none;
+  }
+
+  #create-an-account {
+    background-color: #fff;
+    padding: 0;
+    font-size: 1.2em;
+    color: #07f;
+    width: 10em;
+  }
+
+  #create-an-account:active {
+    background-color: #07f;
+    color: #fff;
+  }
+}
