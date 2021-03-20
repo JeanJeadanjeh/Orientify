@@ -11,45 +11,69 @@
 </head>
     <body>
         <div class="main_section" id="main_section">
-            <div class="login-form-div">
-                <img src="./res/images/orientify_icon.svg"></img>
-                <h1>Sign in to Orientify</h2>
-                <form id="login-form">
-                    <table>
-                        <tr>
-                            <th><label>First Name</label></th>
-                            <th><label>Last Name</label></th>
-                        </tr>
-                        <tr>
-                            <th><input></th>
-                            <th><input></th>
-                        </tr>
-                        <tr>
-                            <th><label>Date of Birth</label></th>
-                            <th><input></th>
-                        </tr>
-                    </table>
-
-                    <label>Username</label>
-                    <input>
-
-                    <label>Email address</label>
-                    <input>
-
-                    <label>Phone number</label>
-                    <input>
-
-                    <label>Password</label>
-                    <input type="password" name="password">
-
-                    <label>Password</label>
-                    <input type="password" name="password">
-                    
-                    <button>Sign in</button>
-                    <h4 style="align-self:center; margin-bottom: 0;">New to Orientify ? <a href="">Create an account</a></h4>
-                </form>
+            <div id = page1>
+                <div class="login-form-div">
+                    <img src="./res/images/orientify_icon.svg"></img>
+                    <h1>Sign in to Orientify</h2>
+                    <form id="login-form">
+                        <label>
+                            First Name
+                        </label>
+                        <input type="fname" id="fname">
+                        <label>
+                            Last Name
+                        </label>
+                        <input type="lname" id="lname">
+                        <label>
+                            Date of birth
+                        </label>
+                        <input type="date" value="2003-01-01" id="birth">
+                        <button id="next1" type="button">Next</button>
+                    </form>
+                    <h3 style="color:black">1 of 3</h3>
+                </div>
+            </div>
+            <div id = page2>
+                <div class="login-form-div">
+                    <img src="./res/images/orientify_icon.svg"></img>
+                    <h1>Sign in to Orientify</h2>
+                    <form id="login-form">
+                        <label>
+                            Username
+                        </label>
+                        <input type="name" id="username">
+                        <label>
+                            Email
+                        </label>
+                        <input type="email" id="email">
+                        <label>
+                            Phone number
+                        </label>
+                        <input type="tel">
+                        <button id="next2" type="button">Next</button>
+                    </form>
+                    <h3 style="color:black">2 of 3</h3>
+                </div>
+            </div>
+            <div id = page3>
+                <div class="login-form-div">
+                    <img src="./res/images/orientify_icon.svg"></img>
+                    <h1>Sign in to Orientify</h2>
+                    <form id="login-form">
+                        <label>
+                            Password
+                        </label>
+                        <input>
+                        <label>
+                            Retype Password
+                        </label>
+                        <input>
+                        <button>Submit</button>
+                    </form>
+                    <h3 style="color:black">3 of 3</h3>
+                </div>
             </div>
         </div>
-        <script src="res/js/dropdownMenu.js"></script>
+        <script src="./res/js/createAnAccountPages.js"></script>
     </body>
 </html>
