@@ -47,24 +47,26 @@ body {
   width: 4em;
 }
 
-#login-form {
+.form-page {
   margin-top: 3em;
+  width: 90%;
   display: flex;
   flex-direction: column;
   color: #000;
 }
 
-#login-form label {
+.form-page label {
   margin-top: 0.9em;
   margin-bottom: 0.5em;
 }
 
-#login-form input {
+.form-page input {
   margin-bottom: 0.2em;
   width: 100%;
+  font-size: 1em;
 }
 
-#login-form button {
+.form-page button {
   width: 100%;
   margin-top: 0.9em;
 }
