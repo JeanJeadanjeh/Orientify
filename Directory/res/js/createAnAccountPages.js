@@ -23,6 +23,18 @@ function validateEmail(email) {
     return re.test(email.toLowerCase());
 }
 
+function validatePassword(password) {
+    var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+    if(password.match(decimal)) 
+    { 
+        return true;
+    }
+    else
+    { 
+        return false;
+    }
+}
+
 function isValid(element){
     var regEx = /^[A-Za-z \s \-]+$/;
     if (element===fname)
@@ -56,11 +68,12 @@ function isValid(element){
         }
     }
 
+    var regExUsername = /^[a-zA-Z0-9_]+$/;
     if (element===username)
     {
         invalid_username = document.getElementById("invalid-username");
         invalid_username.style.display = "none"; 
-        if(username.value.match(regEx))
+        if(username.value.match(regExUsername))
         {
             invalid_username.style.display = "none";  
             return true;
@@ -77,6 +90,28 @@ function isValid(element){
         invalid_email.style.display = "none"; 
         validateEmail(email_input.value) ? invalid_email.style.display = "none" :  invalid_email.style.display = "initial"; ; 
         return validateEmail(email_input.value);
+    }
+    
+    if (element===password2){
+        invalid_password = document.getElementById("invalid-password");
+        not_matching = document.getElementById("pass-not-matching");
+        invalid_password.style.display = "none";
+        not_matching.style.display = "none";
+        
+        if (!validatePassword(password1.value)){
+            invalid_password.style.display = "initial";
+            return false;
+        }
+        else if (password1.value !== password2.value){
+            invalid_password.style.display = "none";
+            not_matching.style.display = "initial";
+            return false;
+        }
+        else{
+            invalid_password.style.display = "none";
+            not_matching.style.display = "none";    
+            return true;
+        }
     }
     return false;
 }
@@ -109,8 +144,27 @@ function checkValidity(element){
             toggle(page3);
         }
     }
-    else{
-        console.log((password1.value===password2.value) && password1.value.length>8);
+    if (element===submit){
+        if (isValid(password2)){
+            console.log("Done!")
+        }else{
+            var firstname_value = fname.value;
+            var lastname_value = lname.value;
+            var birth_value = birth.value;
+            var username_value = username.value;
+            var email_value = email_input.value;
+            var salt_value = bcrypt.randomBytes(16)
+            var password_value = bcrypt.hash(password2.value, 10);
+            console.log(
+                firstname_value,
+                lastname_value,
+                birth_value,
+                username_value,
+                email_value,
+                salt_value,
+                password_value
+                )
+        }
     }
 }
 
