@@ -124,7 +124,6 @@ function toggle(element){
     }
 }
 
-
 function checkValidity(element){
     if (element === next1){
         var cond1 = isValid(fname);
@@ -147,23 +146,27 @@ function checkValidity(element){
     if (element===submit){
         if (isValid(password2)){
             console.log("Done!")
-        }else{
             var firstname_value = fname.value;
             var lastname_value = lname.value;
             var birth_value = birth.value;
             var username_value = username.value;
             var email_value = email_input.value;
-            var salt_value = bcrypt.randomBytes(16)
-            var password_value = bcrypt.hash(password2.value, 10);
+            var salt_value = "kV@!";
+
+            var password_value = bcrypt.hash(salt_value+password2.value, 10);
             console.log(
-                firstname_value,
-                lastname_value,
-                birth_value,
-                username_value,
-                email_value,
-                salt_value,
-                password_value
+                    {
+                        firstname_value,
+                        lastname_value,
+                        birth_value,
+                        username_value,
+                        email_value,
+                        salt_value,
+                        password_value
+                    }
                 )
+        }else{
+            console.log("Error")
         }
     }
 }
